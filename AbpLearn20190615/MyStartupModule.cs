@@ -10,6 +10,7 @@ namespace AbpLearn20190615
     {
         public override void PreInitialize()
         {
+            Configuration.Auditing.IsEnabledForAnonymousUsers = true;
             IocManager.Register<IAuditingStore,MyAuditingStore>(DependencyLifeStyle.Singleton);
         }
 

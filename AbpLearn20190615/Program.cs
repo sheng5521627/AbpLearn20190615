@@ -14,7 +14,7 @@ namespace AbpLearn20190615
             });
             bootstrapper.Initialize();
             var iocManager = bootstrapper.IocManager;
-            var auditingTest = iocManager.Resolve<IAuditingTest>();
+            var auditingTest = iocManager.Resolve<AuditingTest>();
             auditingTest.Auditing();
 
             Console.WriteLine(iocManager.IsRegistered<IAuditingConfiguration>());
